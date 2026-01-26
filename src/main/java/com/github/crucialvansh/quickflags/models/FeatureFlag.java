@@ -19,18 +19,17 @@ public class FeatureFlag {
 
     @Id
     @Column(nullable = false, unique = true)
-    private String name; // The key, e.g., "new-checkout-flow"
+    private String name;
 
     @Column(nullable = false)
-    private String description; // e.g., "Replaces old checkout with React version"
+    private String description;
 
     @Column(nullable = false)
-    private boolean isEnabled; // The master "Kill Switch". If false, nobody gets it.
+    private boolean isEnabled;
 
     @Column(nullable = false)
-    private int rolloutPercentage; // 0 to 100. (0 = Nobody, 100 = Everyone)
+    private int rolloutPercentage;
 
-    // Timestamps for audit (Enterprise requirement!)
     @CreationTimestamp
     private LocalDateTime createdAt;
 
