@@ -6,7 +6,7 @@ It is designed to handle **percentage-based rollouts** (Canary Releases) using a
 
 ## About me
 Hi, I'm Vansh a Software Engineering Student from the University of New South wales. I am currently in my honours year and close to finishing my degree. This project is way for me to apply my knowledge I learned as a student into real world applications. I hope to keep adding and progressing this project (alongside other projects).
-Any advice or criticism will highly appreciated and will help me in my journey as a developer. 
+Any advice or criticism will be highly appreciated and will help me in my journey as a developer. 
 
 ## Key Features
 
