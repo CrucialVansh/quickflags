@@ -21,7 +21,6 @@ public class FeatureFlagController {
 
     @PostMapping
     public FeatureFlag createNewFlag(@RequestBody FeatureFlag featureFlag) {
-
         return flagRepository.save(featureFlag);
     }
 
@@ -34,12 +33,10 @@ public class FeatureFlagController {
     @PutMapping("/{name}")
     public FeatureFlag updateFlag(@PathVariable String name, @RequestBody FeatureFlag updatedFlag) {
         return flagRepository.findById(name).map(flag -> {
-                flag.setName(updatedFlag.getName());
-                flag.setEnabled(updatedFlag.isEnabled());
                 flag.setRolloutPercentage(updatedFlag.getRolloutPercentage());
                 flag.setDescription(updatedFlag.getDescription());
                 flag.setUpdatedAt(updatedFlag.getUpdatedAt());
-                return flag;
+                return flagRepository.save(flag);
         }).orElseGet(() -> flagRepository.save(updatedFlag));
 
     }
